@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cors());
 
 
-// //Contact Routes
+//Contact Routes
 app.get('/contacts', contact.getAllContacts)
 app.get('/contacts/:id', contact.getOneContact)
 app.post('/contacts/', contact.postContact)

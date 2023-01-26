@@ -1,20 +1,18 @@
 import React, { useEffect } from "react";
-import axios from 'axios';
 import SharedLayout from "./components/SharedLayout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from './ScrollToTop'
+import ScrollToTop from "./ScrollToTop";
 import "./Nav.css";
 import "./About.css";
 import "./Contact.css";
-import "./Deals.css"
-import "./Products.css"
-import "./Cartanditem.css"
-import "./Login.css"
-import "./HomeIndex.css"
-import './Summary.css'
-import "./footer.css"
-import "./newsletter.css"
-
+import "./Deals.css";
+import "./Products.css";
+import "./Cartanditem.css";
+import "./Login.css";
+import "./HomeIndex.css";
+import "./Summary.css";
+import "./footer.css";
+import "./newsletter.css";
 
 import About from "./pages/About";
 import Products from "./pages/Products";
@@ -29,20 +27,21 @@ import HotItems from "./pages/HotItem";
 import footer from "./components/footer";
 
 const App = () => {
-
-
-
   return (
-    <Router> 
+    <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<SharedLayout />}> 
-          {/* A path is just the route to the individual page  */}
+          <Route path="/" element={<SharedLayout
+          />}>
+           
             <Route index element={<Index />} />
-            {/* Element is the component being rendener*/}
+     
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/products/:productTarget" element={<Singleproduct />} />
+            <Route
+              path="/products/:productTarget"
+              element={<Singleproduct />}
+            />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Login />} />
